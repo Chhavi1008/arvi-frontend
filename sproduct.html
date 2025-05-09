@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARVI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""> </a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href ="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contacts</a></li>   
+                <li class="login-container">
+                    <a href="#" id="login-btn">
+                        <i class="fa fa-user user-icon"></i> 
+                        <span class="user-text">Login</span>
+                    </a>
+                </li> 
+                <div id="cart-icon">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                <span class="cart-item-count"></span> 
+                </div> 
+                <a href="#" id="close"><i class="fa-solid fa-x"></i></a>     
+            </ul>
+        </div>
+        <div id="mobile">
+            <div id="cart-icon">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                <span class="cart-item-count"></span> 
+                </div>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+     </section>
+     <div class="cart2">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+           <!-- <div class="cart-box">
+                <img src="img/products/f1.webp" class="cart-img">
+                <div class="cart-details">
+                    <h2 class="cart-product-title">Tied Placket T-Shirt</h2>
+                    <span class="cart-price">₹1,614</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+                    </div>
+                </div>
+                <i class="fa fa-trash cart-remove" aria-hidden="true"></i>
+            </div>-->
+        </div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">₹0</div>
+        </div>
+        <button class="btn-buy">Buy Now</button>
+        <i class="fa-solid fa-x" id="cart-close"></i>
+     </div>
+     <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+    
+            <!-- Sign In Form -->
+            <div id="SignIn">
+                <h1 class="form-title">Sign In</h1>
+                <form method="post">
+                    <div class="input-group">
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" id="signin-email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" id="signin-password" placeholder="Password" required>
+                    </div>
+                    <input type="submit" class="btn" value="Sign In">
+                </form>
+    
+                <p class="recover">
+                    <a href="#">Recover Password</a>
+                </p>
+                <div class="icons">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+    
+                <div class="links">
+                    <p>Don't have an account yet?</p>
+                    <button class="normal" id="signUpButton">Sign Up</button>
+                </div>
+            </div>
+    
+            <!-- Sign Up Form (Initially Hidden) -->
+            <div id="Signup" style="display: none;">
+                <h1 class="form-title">Register</h1>
+                <form method="post">
+                    <div class="input-group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" id="fname" placeholder="First Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" id="lname" placeholder="Last Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" id="signup-email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" id="signup-password" placeholder="Password" required>
+                    </div>
+                    <input type="submit" class="btn" value="Sign Up">
+                </form>
+    
+                <p class="or">-------- or --------</p>
+                <div class="icons">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+    
+                <div class="links">
+                    <p>Already have an account?</p>
+                    <button class="normal" id="signInButton">Sign In</button>
+                </div>
+            </div>
+        </div>
+         </div>
+     <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="img/products/f1.webp" width="100%" id="MainImg" alt="">
+            <div class="small-img-group" id="small-img-group">
+                <div class="small-img-col">
+                    <img src="img/products/f1.webp" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/d1.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/d2.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/d3.jpg" width="100%" class="small-img" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="single-pro-details">
+            <h6>Home / T-Shirt</h6>
+            <h4><span id="product-title">Tied Placket T-Shirt</span></h4>
+            <h2><span id="product-price">₹1,614</span></h2>
+            <select>
+                <option>Select Size</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+            </select>
+            <input type="number" id="product-quantity" value="1" min="1">
+            <button class="normal" id="add-to-cart-btn">Add To Cart</button>
+            <h4>Product Details</h4>
+            <span id="product-description">What’s a cheeky outfit if it doesn’t use stripes as a statement on its own? This oversized T-shirt with its shirt collar neckline, short sleeves and a regular length does just that. The side tied detail is perfect with a coffee in hand.</span>
+            <h4>About This Product</h4>
+            <span id="product-about">Material: Cotton, Polyester ;
+                Stretchability: Slightly Stretchable<br>
+                Fit: Oversized ;
+                Quantity: 1 Piece ;
+                Chest Pad: No<br>
+                Neckline: Shirt collar ;
+                Sleeve Type: Regular Sleeve<br>
+                Sleeve Length: Short Sleeve ;
+                Length: Regular ;
+                Silhouette: H-line</span>
+        </div>
+     </section>
+     <section id="product1" class="section-p1">
+        <p>      </p>
+        <h2>New Arrivals</h2>
+        <p>Explore The Latest DENIM Collection</p>
+        <div class="pro-container">
+            <div class="pro" onclick="window.location.href='sproduct.html?id=9';">
+                <img src="img/products/n1.webp" class="img-box" alt="Product 9">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5 class="product-title">Ruffle Denim Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="price">₹1,845</h4>
+                </div>
+                <button>
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=10';">
+                <img src="img/products/n2.webp" class="img-box" alt="Product 10">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5 class="product-title">Patchwork Denim Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="price">₹3,495</h4>
+                </div>
+                <button>
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=11';">
+                <img src="img/products/n3.webp" class="img-box" alt="Product 11">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5 class="product-title">Rhinestone Denim Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="price">₹2,995</h4>
+                </div>
+                <button>
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=12';">
+                <img src="img/products/n4.webp" class="img-box" alt="Product 12">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5 class="product-title">Denim Bodycon Dress with Belt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="price">₹2,145</h4>
+                </div>
+                <button>
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+        </div>
+     </section>
+    
+     <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your Email Address">
+            <button class="normal" id="newsletter-signup">Sign Up</button>
+        </div>
+     </section>
+     <footer class="section-p1 section-m1">
+        <div class="col">
+            <img src="img/logo.png" alt="" class="logo2">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> 562 Wellington Road, Street 32, San Francisco</p>
+            <p><strong>Phone:</strong> +01 2222 365 /(+91) 01 2345 6789</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg">
+                <img src="img/pay/play.jpg">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png">
+        </div>
+
+        <div class="copyright">
+            <p>© 2021, Tech2 etc - HTML CSS Ecommerce Template</p>
+        </div>
+     </footer>
+
+     <script src="script.js"></script> 
+
+     <script>
+
+        const products = {
+          1: {
+            name: "Tied Placket T-Shirt",
+            image: "img/products/f1.webp",
+            price: "₹1,614",
+            description: "What’s a cheeky outfit if it doesn’t use stripes as a statement on its own? This oversized T-shirt with its shirt collar neckline, short sleeves and a regular length does just that. The side tied detail is perfect with a coffee in hand.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/f1.webp", "img/products/d1.jpg", "img/products/d2.jpg", "img/products/d3.jpg"]
+          },
+          2: {
+            name: "Seam Tank Top",
+            image: "img/products/f2.webp",
+            price: "₹845",
+            description: "It’s gorgeous, and it’s minimal! This seam tank top is an Urbanic favorite for its slim fit featuring a seam design detail. Bag yours today!",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/f2.webp", "img/products/d4.webp", "img/products/d5.webp", "img/products/d6.jpeg"]
+          },
+          3: {
+            name: "Lace Up Placket Blouse",
+            image: "img/products/f3.webp",
+            price: "₹2,394",
+            description: "Shirt dress in a regular fit with a flared hem. Striped pattern with darted and lace-up design detail. Featuring a shirt collar, long sleeves, and short length.",
+            about: "Material: Polyester Stretchability: Not Stretchable Fit: Regular Fit Quantity: 1 Piece Chest Pad: No Belt: No Neckline: Shirt collar Sleeve Type: Regular Sleeve Sleeve Length: Long Sleeve Length: Short Silhouette: X-line",
+            smallImages: ["img/products/f3.webp", "img/products/d7.webp", "img/products/d8.webp", "img/products/d9.webp"]
+          },
+          4: {
+            name: "Cropped Cami Top",
+            image: "img/products/f4.webp",
+            price: "₹845",
+            description: "Baby pink becomes a bit babi-er in this gorgeous cropped cami top that hugs your body. The slim fit is sure to make head turns!",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/f4.webp", "img/products/d10.webp", "img/products/d11.webp", "img/products/d12.webp"]
+          },
+          5: {
+            name: "Darted Shorts",
+            image: "img/products/f5.webp",
+            price: "₹1,245",
+            description: "Relaxed fit shorts with a regular waistline, wide leg design and darted detail for a stylish and comfortable look.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/f5.webp", "img/products/d13.webp", "img/products/d14.webp", "img/products/d15.webp"]
+          },
+          6: {
+            name: "Gym Leggings with Pocket",
+            image: "img/products/f6.webp",
+            price: "₹1,614",
+            description: "Pick up your newest sport addiction with these high waist gym leggings that have a flattering slim fit, thanks to a very stretchable and breathable fabric. They also include a pocket and a slit detail with delicate seam features.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/f6.webp", "img/products/d16.webp", "img/products/d17.webp", "img/products/d18.webp"]
+          },
+          7: {
+            name: "Bodycon Dress with Belt",
+            image: "img/products/f7.webp",
+            price: "₹1,845",
+            description: "Camis just got a redo with this satin and cowl neck number. The sleeveless design and regular, flattering fit goes beautifully for cocktail hour or a drive late at night. The asymmetrical hem comes with a sturdy belt that adds dimension to the short length.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/f7.webp", "img/products/d19.webp", "img/products/d20.webp", "img/products/d21.webp"]
+          },
+          8: {
+            name: "Cut Out Blouse",
+            image: "img/products/f8.webp",
+            price: "₹1,644",
+            description: "A lot of styling potential can be added to your closet with this revamped version of a classic satin blouse. The relaxed fit and shirt collar neckline keeps things simple, whereas the cut out and draped sleeves, mixed with dropped shoulders make it fun.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/f8.webp", "img/products/d22.webp", "img/products/d23.webp", "img/products/d24.webp"]
+          },
+          9: {
+            name: "Ruffle Denim Top",
+            image: "img/products/n1.webp",
+            price: "₹1,845",
+            description: "Own the Sabrina Carpenter look with this tied denim top. Apart from the criss cross brilliance, it also features a ruffle design and slim fit with a cottony fabric.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/n1.webp", "img/products/d25.webp", "img/products/d26.webp", "img/products/d27.webp"]
+          },
+          10: {
+            name: "Patchwork Denim Top",
+            image: "img/products/n2.webp",
+            price: "₹3,495",
+            description: "The butterflies top flying all over the internet just got a sweet contender with this piece. Say hello to our little embellished rhinestone beauty—a patchwork denim top with colour blocking and collarless neckline. The regular fit is extremely comfy and great for concerts or casual brunches alike.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/n2.webp", "img/products/d28.webp", "img/products/d29.webp", "img/products/d30.webp"]
+          },
+          11: {
+            name: "Rhinestone Denim Top",
+            image: "img/products/n3.webp",
+            price: "₹2,995",
+            description: "A true Londoner fit, this cropped top comes with a surprising belted waist. A touch of glam is added with rhinestones, suiting the regular fit and no collar show. Best worn for impromptu house parties or Soho strolls.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/n3.webp", "img/products/d31.webp", "img/products/d32.webp", "img/products/d33.webp"]
+          },
+          12: {
+            name: "Denim Bodycon Dress with Belt",
+            image: "img/products/n4.webp",
+            price: "₹2,145",
+            description: "Own the spotlight in our Regular Fit Bodycon Dress. This pencil shaped stunner features a belted design detail that cinches at the waist, creating a flattering, feminine silhouette. The no collar look with the mini length keeps things playful and fun for a night out or a day frolicking by the park.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/n4.webp", "img/products/d34.webp", "img/products/d35.webp", "img/products/d36.webp"]
+          },
+          13: {
+            name: "Asymmetric Straight Denim Skirt",
+            image: "img/products/n5.webp",
+            price: "₹1,930",
+            description: "Wrap around this 90s number with its short length and regular waist. You can bring it together in an eclectic outfit with any bodycon top, bralette or tanktini, thanks to its straight shaped hem.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/n5.webp", "img/products/d37.webp", "img/products/d38.webp", "img/products/d39.webp"]
+          },
+          14: {
+            name: "Flare Leg Jeans",
+            image: "img/products/n6.webp",
+            price: "₹2,093",
+            description: "Relaxed fit flare leg jeans with regular waist and seam design detail. Maxi length for a stylish and comfortable look.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/n6.webp", "img/products/d40.webp", "img/products/d41.webp", "img/products/d42.webp"]
+          },
+          15: {
+            name: "Jacquard Denim Top with Rhinestone Bow",
+            image: "img/products/n7.webp",
+            price: "₹1,995",
+            description: "Regular fit cropped top made of jacquard denim fabric . Features a rhinestone bow design detail.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/n7.webp", "img/products/d43.webp", "img/products/d44.webp", "img/products/d45.webp"]
+          },
+          16: {
+            name: "Slit Flare Leg Jeans",
+            image: "img/products/n8.webp",
+            price: "₹2,345",
+            description: "Wrap around this 90s number with its short length and regular waist. You can bring it together in an eclectic outfit with any bodycon top, bralette or tanktini, thanks to its straight shaped hem.",
+            about: "Material: Cotton, Polyester ; Stretchability: Slightly Stretchable Fit: Oversized ; Quantity: 1 Piece ; Chest Pad: No Neckline: Shirt collar ; Sleeve Type: Regular Sleeve Sleeve Length: Short Sleeve ; Length: Regular ; Silhouette: H-line",
+            smallImages: ["img/products/n8.webp", "img/products/d46.webp", "img/products/d47.webp", "img/products/d48.webp"]
+          }
+        };
+      
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get("id");
+      
+        if (products[productId]) {
+          const p = products[productId];
+          document.getElementById("MainImg").src = p.image;
+          document.getElementById("product-title").innerText = p.name;
+          document.getElementById("product-price").innerText = p.price;
+          document.getElementById("product-description").innerText = p.description;
+          document.getElementById("product-about").innerText = p.about;
+
+      
+          // Insert small images into DOM
+          const smallImgGroup = document.getElementById("small-img-group");
+          smallImgGroup.innerHTML = "";
+          p.smallImages.forEach(src => {
+            smallImgGroup.innerHTML += `
+              <div class="small-img-col">
+                <img src="${src}" width="100%" class="small-img" alt="">
+              </div>`;
+          });
+           // Add to cart
+      document.getElementById("add-to-cart-btn").addEventListener("click", () => {
+        const quantity = parseInt(document.getElementById("product-quantity").value);
+        const title = p.name;
+        const price = parseFloat(p.price.replace(/[^0-9.]/g, ""));
+        const imgSrc = p.image;
+
+        if (quantity > 0) {
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+          const existingItem = cart.find(item => item.title === title);
+          if (existingItem) {
+            existingItem.quantity += quantity;
+          } else {
+            cart.push({ title, price, imgSrc, quantity });
+          }
+          localStorage.setItem("cart", JSON.stringify(cart));
+
+          const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+          const badgeEls = document.querySelectorAll(".cart-item-count");
+          badgeEls.forEach(el => el.innerText = cartCount);
+
+          alert("Your item is added to cart!");
+          location.reload();
+        } else {
+          alert("Please enter a valid quantity.");
+        }
+     });
+       }
+       document.addEventListener("DOMContentLoaded", () => {
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+          const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+          const badgeEls = document.querySelectorAll(".cart-item-count");
+          badgeEls.forEach(el => el.innerText = cartCount);
+        });
+      </script>
+
+     <script>
+        var MainImg = document.getElementById("MainImg");
+        var smallImg = document.getElementsByClassName("small-img");
+    
+        for (let i = 0; i < smallImg.length; i++) {
+            smallImg[i].onclick = function () {
+                MainImg.src = smallImg[i].src;
+            };
+        }
+    </script>
+    
+</body>
+</html>

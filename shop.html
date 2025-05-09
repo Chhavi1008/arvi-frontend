@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARVI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""> </a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href ="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contacts</a></li>   
+                <li class="login-container">
+                    <a href="#" id="login-btn">
+                        <i class="fa fa-user user-icon"></i> 
+                        <span class="user-text">Login</span>
+                    </a>
+                </li> 
+                <div id="cart-icon">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                <span class="cart-item-count"></span> 
+                </div> 
+                <a href="#" id="close"><i class="fa-solid fa-x"></i></a>     
+            </ul>
+        </div>
+        <div id="mobile">
+            <div id="cart-icon">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                <span class="cart-item-count"></span> 
+                </div>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+     </section>
+     <div class="cart2">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+           <!-- <div class="cart-box">
+                <img src="img/products/f1.webp" class="cart-img">
+                <div class="cart-details">
+                    <h2 class="cart-product-title">Tied Placket T-Shirt</h2>
+                    <span class="cart-price">₹1,614</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+                    </div>
+                </div>
+                <i class="fa fa-trash cart-remove" aria-hidden="true"></i>
+            </div>-->
+        </div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">₹0</div>
+        </div>
+        <button class="btn-buy">Buy Now</button>
+        <i class="fa-solid fa-x" id="cart-close"></i>
+     </div>
+     <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+    
+            <!-- Sign In Form -->
+            <div id="SignIn">
+                <h1 class="form-title">Sign In</h1>
+                <form method="post">
+                    <div class="input-group">
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" id="signin-email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" id="signin-password" placeholder="Password" required>
+                    </div>
+                    <input type="submit" class="btn" value="Sign In">
+                </form>
+    
+                <p class="recover">
+                    <a href="#">Recover Password</a>
+                </p>
+                <div class="icons">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+    
+                <div class="links">
+                    <p>Don't have an account yet?</p>
+                    <button class="normal" id="signUpButton">Sign Up</button>
+                </div>
+            </div>
+    
+            <!-- Sign Up Form (Initially Hidden) -->
+            <div id="Signup" style="display: none;">
+                <h1 class="form-title">Register</h1>
+                <form method="post">
+                    <div class="input-group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" id="fname" placeholder="First Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" id="lname" placeholder="Last Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" id="signup-email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" id="signup-password" placeholder="Password" required>
+                    </div>
+                    <input type="submit" class="btn" value="Sign Up">
+                </form>
+    
+                <p class="or">-------- or --------</p>
+                <div class="icons">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+    
+                <div class="links">
+                    <p>Already have an account?</p>
+                    <button class="normal" id="signInButton">Sign In</button>
+                </div>
+            </div>
+        </div>
+         </div>
+     <section id="page-header">
+        <h2>FASHION PIONEER</h2>
+        <p>Free Shipping for orders ₹990+</p>
+     </section>
+     <section id="product1" class="section-p1">
+        <p>      </p>
+        <div class="pro-container">
+            <div class="pro" onclick="window.location.href='sproduct.html?id=1';">
+                <img src="img/products/f1.webp" alt="Product 1">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Tied Placket T-Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹1,614</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>    
+                </a>            
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=2';">
+                <img src="img/products/f2.webp" alt="Product 2">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Seam Tank Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹845</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=3';">
+                <img src="img/products/f3.webp" alt="Product 3">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Lace Up Placket Blouse</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹2,394</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=4';">
+                <img src="img/products/f4.webp" alt="Product 4">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Cropped Cami Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹845</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=5';">
+                <img src="img/products/f5.webp" alt="Product 5">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Darted Shorts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹1,245</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=6';">
+                <img src="img/products/f6.webp" alt="Product 6">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Gym Leggings with Pocket</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹1,614</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=7';">
+                <img src="img/products/f7.webp" alt="Product 7">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Bodycon Dress with Belt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹1,845</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=8';">
+                <img src="img/products/f8.webp" alt="Product 8">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Cut Out Blouse</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹1,644</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=9';">
+                <img src="img/products/n1.webp" alt="Product 9">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Ruffle Denim Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹1,845</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=10';">
+                <img src="img/products/n2.webp" alt="Product 10">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Patchwork Denim Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹3,495</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=11';">
+                <img src="img/products/n3.webp" alt="Product 11">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Rhinestone Denim Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹2,995</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=12';">
+                <img src="img/products/n4.webp" alt="Product 12">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Denim Bodycon Dress with Belt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹2,145</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=13';">
+                <img src="img/products/n5.webp" alt="Product 13">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Asymmetric Straight Denim Skirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹1,930</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=14';">
+                <img src="img/products/n6.webp" alt="Product 14">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Flare Leg Jeans</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹2,093</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=15';">
+                <img src="img/products/n7.webp" alt="Product 15">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Jacquard Denim Top with Rhinestone Bow</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹1,995</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html?id=16';">
+                <img src="img/products/n8.webp" alt="Product 16">
+                <div class="des">
+                    <span>Urbanic</span>
+                    <h5>Slit Flare Leg Jeans</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹2,345</h4>
+                </div>
+                <button onclick="event.stopPropagation();">
+                    <i class="fa-solid fa-shopping-cart cart"></i>
+                </button>                
+            </div>
+        </div>
+     </section>
+     <section id="pagenation" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
+     </section>
+     <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your Email Address">
+            <button class="normal" id="newsletter-signup">Sign Up</button>
+        </div>
+     </section>
+     <footer class="section-p1 section-m1">
+        <div class="col">
+            <img src="img/logo.png" alt="" class="logo2">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> 562 Wellington Road, Street 32, San Francisco</p>
+            <p><strong>Phone:</strong> +01 2222 365 /(+91) 01 2345 6789</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg">
+                <img src="img/pay/play.jpg">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png">
+        </div>
+
+        <div class="copyright">
+            <p>© 2021, Tech2 etc - HTML CSS Ecommerce Template</p>
+        </div>
+     </footer>
+    <script src="script.js"></script> 
+</body>
+</html>
