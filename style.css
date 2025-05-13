@@ -386,6 +386,10 @@ input:not(:placeholder-shown) ~ label {
     color: dodgerblue;
 }
 
+#hero p{
+    color: dodgerblue;
+}
+
 #hero button{
     background-image: url(img/button.png);
     background-color: transparent;
